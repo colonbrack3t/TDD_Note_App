@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do lists</title>
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row {%block background_color%}bg-light{% endblock%}" >
+            <div class="col mx-auto">
+                <div class="text-center">
+                    <h1 class= 'mt-4'>
+                        Do it!
+                    </h1>
+                    <h2>{% block header_text %}{% endblock %}</h2>
+                    {% block content%}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

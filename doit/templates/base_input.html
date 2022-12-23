@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form class = "input-group input-group-lg p-4 row" method="POST" action="{% block form_action %}{% endblock %}">
+        
+        <div class="col-6 mx-auto"><input class= "form-control" name="item_text" id="id_new_item" placeholder="Enter a to-do item" /></div>
+        {% csrf_token %}
+      </form>
+
+  
+  <div class="row">
+    <div class="mx-auto">
+      {% block table %}
+      {% endblock %}
+    </div>
+  </div>
+{% endblock%}
